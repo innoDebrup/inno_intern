@@ -1,0 +1,72 @@
+<!-- Write HTML of table -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table</title> 
+  
+  <!-- Tried to match style of the table given in problem image-->
+  <style>
+    tr:nth-child(even){background-color: gainsboro;}
+    tr:nth-child(odd){background-color: none;}
+    td,table,th{ 
+      font-size: 25px;
+      border-collapse: collapse;
+      border: 1px solid gainsboro;
+      text-align: left;
+      padding : 8px;
+    }
+    .col_width_large{
+      column-width: 40rem;
+    }
+    .col_width_medium{
+      column-width: 20rem;
+    }
+    .col_width_small{
+      column-width: 10rem;
+    }
+  </style>
+
+</head>
+<body>
+  <table>
+    <tr>
+      <th class="col_width_large">Company</th>
+      <th class="col_width_medium">Contact</th>
+      <th class="col_width_small">Country</th>
+    </tr>
+    <tr>
+      <td class="col_width_large">Alfreds Futterkiste</td>
+      <td class="col_width_medium">Maria Anders</td>
+      <td class="col_width_small">Germany</td>
+    </tr>
+    <tr>
+      <td class="col_width_large">Centro comercial Moctezuma</td>
+      <td class="col_width_medium">Francisco Chang</td>
+      <td class="col_width_small">Mexico</td>
+    </tr>
+    <tr>
+      <td class="col_width_large">Ernst Handel</td>
+      <td class="col_width_medium">Roland Mendel</td>
+      <td class="col_width_small">Austria</td>
+    </tr>
+    <tr>
+      <td class="col_width_large">Island Trading</td>
+      <td class="col_width_medium">Helen Bennett</td>
+      <td class="col_width_small">UK</td>
+    </tr>
+    <tr>
+      <td class="col_width_large">Laughing Bacchus Winecellars</td>
+      <td class="col_width_medium">Yoshi Tannamuri</td>
+      <td class="col_width_small">Canada</td>
+    </tr>
+    <tr>
+      <td class="col_width_large">Magazzini Alimentari Riuniti</td>
+      <td class="col_width_medium">Giovanni Rovelli</td>
+      <td class="col_width_small">Italy</td>
+    </tr>
+  </table>
+</body>
+</html>

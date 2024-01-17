@@ -1,0 +1,12 @@
+$(document).ready(function(){
+  $("#header").click(function(){
+    $(this).toggleClass("color_maroon");
+  });
+  $("#sidebar").click(function(){
+    $("#text_sidebar").html("Leftbar");
+  });
+  $("#extra").click(function(){
+    $("#main").slideUp("slow");
+    $(this).css("height","100%");
+  });
+});

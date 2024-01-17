@@ -1,0 +1,167 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+.banner{
+  background: linear-gradient(rgba(220, 16, 227, 0.204),rgba(72, 160, 219, 0.318)),url(img/clinic_back.jpg) no-repeat center/cover;
+  height: 1000px;
+  width: 100dvw;
+  position: relative;
+}
+.head{
+  flex-direction: column;
+  height: 100%;
+}
+.flex_center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head span{
+  display: inline-block;
+  font-size: 50px;
+  text-align: justify;
+  font-weight: 700;
+  width: 700px;
+  text-align: center;
+  padding-top: 30px;
+  color: white;
+}
+
+.head .flex_center img{
+  padding: 20px 7px;
+}
+.header{
+  width: 700px;
+}
+.tagline{
+  font-size: x-large;
+  font-weight: 500;
+  color: white;
+}
+.wrapper{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper div{
+  display: inline-block;
+  position: absolute;
+}
+
+.i1{
+  top: 100px;
+  left: 100px;
+}
+.i4{
+  top: 100px;
+  right: 100px;
+}
+
+.i2{
+  top: 500px;
+  left: 70px;
+
+}
+
+.i5{
+  top: 500px ;
+  right: 70px;
+}
+
+.i3{
+  bottom: 20px ;
+  left: 120px;
+}
+
+.i6{
+  bottom: 20px ;
+  right: 120px;
+}
+
+.t_head{
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  & > p{
+    font-size: 50px;
+    font-weight: 600;
+    
+    & > span{
+      color: #07c2ff;
+    }
+  }
+}
+
+.catalog{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.card{
+  width: 350px;
+  transition: ease-in 0.2s;
+  background-color: white;
+}
+
+.card img{
+  width:100%;  
+}
+
+.captions{
+  text-align: center;
+  padding: 15px;
+  background-color: white;
+  transition: ease-in 0.2s;
+  /* background-color: red; */
+  & > p{
+    display: block;
+    padding-top: 20px;
+  }
+
+  & > a{
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    background-color: #07c2ff;
+    border-radius: 8px;
+    transform: scale(0);
+    transition: ease-in 0.2s;
+  }
+}
+
+.card:hover {
+  box-shadow: 5px 5px 15px rgb(220, 217, 217);
+  transform: translate( 0, -5px);
+}
+
+.card:hover a{
+  transition: ease-in 0.2s;
+  transform: scale(1);
+}
+
+.card:hover .captions{
+  transition: ease-in 0.2s;
+  transform: translate(0, -50px);
+}
+
+.templates{
+  background-color: whitesmoke;
+}
