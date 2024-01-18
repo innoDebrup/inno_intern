@@ -1,0 +1,62 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --back: #14142b;
+
+}
+
+body{
+  font-family: sans-serif;
+  list-style: none;
+}
+
+li{
+  display: inline-block;
+}
+a{
+  text-decoration: none;
+}
+.container{
+  width: 1400px;
+  margin: 0 auto;
+}
+.special{
+  font-family:'Share Tech', sans-serif;
+}
+
+.nav{
+  position: fixed;
+  width: 100%;
+  background-color: var(--back);
+}
+
+.header{
+  color: white;
+  text-align: right;
+  & ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  & li{
+    padding: 10px; 
+  }
+  & a{
+    color: white;
+    font-size: smaller;
+  }
+  & span{
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bolder;
+    scale: 1 60%;
+    display: inline-block;
+  }
+  & i{
+    font-size: 20px;
+  }
+}
