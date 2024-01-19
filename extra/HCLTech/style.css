@@ -6,8 +6,13 @@
 
 :root{
   --back: #14142b;
+  --hover_select: rgb(226, 226, 226);
+  --violet_acc: rgb(85, 4, 85);
+  --unselect_grey: rgb(188, 188, 188);
+  --generic_d_grey: rgb(75, 75, 75);
 
 }
+
 
 body{
   font-family: sans-serif;
@@ -19,22 +24,40 @@ li{
 }
 a{
   text-decoration: none;
+  display: inline-block;
+}
+.flex_spabet{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex_center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container{
-  width: 1400px;
+  width: 1200px;
   margin: 0 auto;
+}
+.wrapper{
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 .special{
   font-family:'Share Tech', sans-serif;
 }
 
-.nav{
+.header_nav{
   position: fixed;
+  z-index: 1000;
   width: 100%;
   background-color: var(--back);
 }
 
 .header{
+  /* display: none; */
   color: white;
   text-align: right;
   & ul{
@@ -43,7 +66,7 @@ a{
     justify-content: flex-end;
   }
   & li{
-    padding: 10px; 
+    padding: 8px; 
   }
   & a{
     color: white;
@@ -60,3 +83,210 @@ a{
     font-size: 20px;
   }
 }
+
+.nav_bar{
+  background-color: whitesmoke;
+  height: 72px;
+  & nav{
+    display: inline-block;
+    height: 72px;
+    padding: left;
+    vertical-align: top;
+    
+    & li{
+      height: 100%;
+    }
+
+    & a{
+      height: 72px;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      color: rgb(16, 15, 15);
+      font-size: 0.95rem;
+      border-bottom: 2px whitesmoke solid;
+      transition: ease-in-out 0.2s;
+
+      &:hover{
+        background-color:var(--hover_select);
+        border-bottom: 2px var(--violet_acc) solid;
+        transition: ease-in-out 0.2s;
+      }
+    }
+    & span{
+      font-size: 1rem;
+      font-family:'Share Tech', sans-serif;
+    }
+
+  }
+  
+  & ul{
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.logo{
+  display: inline-block;
+  padding: 21px 0 21px;
+  height: 72px;
+  & img{
+    height: 30px;
+  }
+}
+
+#mid_item{
+  padding-left: 160px;
+}
+
+.expand{
+  position: relative;
+}
+
+.arrow{
+  position: relative;
+  padding-left: 2px;
+  padding-right: 2px;
+  /* background-color: aqua; */
+  & i{
+    font-size: 15px;
+  }
+}
+
+.expand:hover .arrow{
+ transform: translate(0, 0px) rotate(180deg); 
+}
+
+.banner{
+  width: 100dvw;
+  height: 750px;
+}
+
+.main_bg{
+  background: url(img/hcltech.webp) no-repeat center/cover;
+}
+.ban_con{
+  margin-top: 100px;
+  & p{
+    color: white;
+    &:nth-child(3), &:nth-child(4){
+      margin-top: 20px;
+    }
+  }
+}
+
+.large{
+  font-size: 82px;
+}
+.normal{
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.ban_con > a{
+  margin-top: 50px;
+  background-color: white;
+  color:#601fc0;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  & > i{
+    transition: 0.3s;
+  }
+  &:hover i{
+    margin-left: 10px;
+    transition: ease-in-out 0.3s;
+  }
+}
+
+.banner_links{
+  position: absolute;
+  bottom: 30px;
+  & ul li a{
+    color:  var(--unselect_grey);
+    padding: 10px;
+    /* background-color: aqua; */
+    border-bottom: 2px transparent solid;
+    &:focus, &:hover{
+      color: white;
+      border-bottom: 2px white solid;
+    }
+  }
+  & ul li:first-child > a{
+    color: white;
+  }
+}
+
+.news_link{
+  position: absolute;
+  bottom: 30px;
+  right: 60px;
+  display: flex;
+  flex-direction: column;
+}
+#mouse{
+  position: relative;
+  width: 30px;
+  height: 40px;
+  border: 2px var(--unselect_grey) solid;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+#sc_wheel{
+  width: 2px;
+  height: 5px;
+  background-color: var(--unselect_grey);
+  animation: sc_wheel 1.5s linear infinite;
+}
+
+#d_arrow{
+  color: var(--unselect_grey);
+}
+
+.news_link:hover #d_arrow{
+  transform: translate(0,-5px);
+}
+
+.header1{
+  font-size: 20px;
+  padding: 40px 0;
+}
+.card{
+  overflow: hidden;
+}
+.caption{
+  width: 320px;
+  padding: 20px 0;
+  margin: 0 auto;
+  color: var(--generic_d_grey);
+  & span{
+    display: block;
+    font-size: 1.6rem; 
+    margin: 40px 0;
+  }
+}
+.news .card{
+  width: 380px;
+}
+
+.news img{
+  width: 380px;
+}
+
+@keyframes sc_wheel{
+  25%{
+    transform: translate(0,5px);
+  }
+  50%{
+    transform: translate(0,0);
+  }
+  75%{
+    transform: translate(0,-5px);
+  }
+  100%{
+    transform: translate(0,0);
+  }
+
+} 
