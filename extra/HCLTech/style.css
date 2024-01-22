@@ -345,17 +345,19 @@ a{
     
   }
 
+  & .decor_line{
+    transition: ease-out 0.2s;
+    width: 100px;
+    height: 1px;
+    background-color: var(--generic_d_grey);
+  }
+
   &:hover .decor_line{
     background-color: var(--violet_acc);
     animation: moveRight 1s ease-out 0.1s; 
   }
 }
-.decor_line{
-  transition: ease-out 0.2s;
-  /* width: 100px; */
-  height: 1px;
-  background-color: var(--generic_d_grey);
-}
+
 .trends{
   height: 800px;
 }
@@ -457,6 +459,32 @@ a{
   color: var(--generic_d_grey);
 }
 
+#ex_trends{
+  
+  width: 170px;
+  & a{
+    /* display: block; */
+    color: var(--generic_d_grey);
+  }
+
+  & .decor_line{
+    transition: ease-out 0.2s;
+    width: 170px;
+    height: 1px;
+    background-color: var(--generic_d_grey);
+  }
+
+  &:hover a{
+    color: var(--violet_acc);
+    
+  }
+
+  &:hover .decor_line{
+    background-color: var(--violet_acc);
+    animation: moveRight 1s ease-out 0.1s; 
+  }
+}
+
 @keyframes sc_wheel{
   25%{
     transform: translate(0,5px);
@@ -475,9 +503,9 @@ a{
 
 @keyframes moveRight{
   0%{
-    width: 0px;
+    width: 0%;
   }
   100%{
-    width: 100px;
+    width: 100%;
   }
 }
