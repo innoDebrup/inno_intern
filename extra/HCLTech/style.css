@@ -9,7 +9,8 @@
   --hover_select: rgb(226, 226, 226);
   --violet_acc: rgb(85, 4, 85);
   --unselect_grey: rgb(188, 188, 188);
-  --generic_d_grey: rgb(75, 75, 75);
+  --generic_d_grey: rgb(38, 38, 38);
+  --card_hover: rgba(119, 148, 221, 0.173);
 
 }
 
@@ -26,6 +27,11 @@ a{
   text-decoration: none;
   display: inline-block;
 }
+
+.con_smoke{
+  background-color: #f7f7fc;
+}
+
 .flex_spabet{
   display: flex;
   justify-content: space-between;
@@ -255,6 +261,7 @@ a{
 }
 .card{
   overflow: hidden;
+  border-radius: 5px;
 }
 .caption{
   width: 320px;
@@ -270,9 +277,184 @@ a{
 .news .card{
   width: 380px;
 }
-
+.news a:hover{
+  & img{
+    scale: 1.06;
+    transition: ease-in 0.35s;
+  }
+  & > .card{
+    background-color: var(--card_hover);
+  }
+  & .lm div{
+    width: 80px;
+    transition: ease-in 0.2s;
+  }
+}
 .news img{
   width: 380px;
+  transition: ease-in 0.35s;
+}
+.lm{
+  color: var(--violet_acc);
+  height: 24px;
+  overflow: hidden;
+  & div{
+    width: 0px;
+    height: 20px;
+    overflow: hidden;
+    display: inline-block;
+    padding-left: 10px;
+    transition: ease-in 0.3s; 
+  }
+  & i{
+    vertical-align: top;
+    display: inline-block;
+    padding-left: 5px;
+  }
+}
+.sliderFoot{
+  padding: 50px 0;
+}
+.sliderBtns{
+  overflow: hidden;
+  border-radius: 10px;
+}
+.sliderBtns button{
+  border: none;
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: 900;
+  transition: ease-in 0.2s;
+  &:hover{
+    background-color: white;
+    color: var(--violet_acc);
+    transition: ease-in 0.2s;
+  }
+}
+
+#newsroom{
+  
+  width: 100px;
+  & a{
+    /* display: block; */
+    color: var(--generic_d_grey);
+  }
+
+  &:hover a{
+    color: var(--violet_acc);
+    
+  }
+
+  &:hover .decor_line{
+    background-color: var(--violet_acc);
+    animation: moveRight 1s ease-out 0.1s; 
+  }
+}
+.decor_line{
+  transition: ease-out 0.2s;
+  /* width: 100px; */
+  height: 1px;
+  background-color: var(--generic_d_grey);
+}
+.trends{
+  height: 800px;
+}
+.left{
+  height: 100%;
+  width: 790px;
+}
+.right{
+  height: 100%;
+  width: 380px;
+}
+
+.trends .card{
+  width: 380px;
+  height: 100%;
+}
+
+.card_con a{
+  height: 600px;
+}
+.trends a:hover{
+  & img{
+    scale: 1.06;
+    transition: ease-in 0.35s;
+  }
+  & > .card{
+    background-color: var(--card_hover);
+  }
+  & .lm div{
+    width: 80px;
+    transition: ease-in 0.2s;
+  }
+
+  & .ra div{
+    width: 120px;
+  }
+
+  & .ju div{
+    width: 160px;
+  }
+  & .ju2 div{
+    width: 180px;
+  }
+}
+
+.ju,.ju2{
+  font-size: 1.2rem;
+}
+
+.trends img{
+  width: 380px;
+  transition: ease-in 0.35s;
+}
+
+.live{
+  height: 600px;
+  flex-direction: column;
+
+}
+
+.live a{
+  height: 280px;
+}
+
+.live a:hover .smallCard{
+  background: linear-gradient(120deg,#5f16b8 10%,#3e92fa 90%);
+  & p, & span, & i{
+    color: white;
+  }
+}
+
+.smallCard{
+  padding: 30px 40px;
+  background-color: var(--card_hover);
+  & span{
+    background: linear-gradient(45deg,#64a7f6, #523dce);
+    background-clip: text;
+    color: transparent;
+    display: block;
+    font-size: 28px;
+    font-weight: 900;
+    margin: 10px 0 30px 0;
+  }
+  & div{
+    padding: 0;
+  }
+  & i{
+    background: linear-gradient(45deg,#64a7f6, #523dce);
+    background-clip: text;
+    color: transparent;
+    padding: 0;
+  }
+}
+
+.header2{
+  flex-direction: column;
+  align-items: flex-start;
+  height: 60px;
+  color: var(--generic_d_grey);
 }
 
 @keyframes sc_wheel{
@@ -289,4 +471,13 @@ a{
     transform: translate(0,0);
   }
 
-} 
+}
+
+@keyframes moveRight{
+  0%{
+    width: 0px;
+  }
+  100%{
+    width: 100px;
+  }
+}
