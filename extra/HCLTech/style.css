@@ -14,7 +14,6 @@
 
 }
 
-
 body{
   font-family: sans-serif;
   list-style: none;
@@ -165,7 +164,7 @@ a{
 }
 
 .banner{
-  width: 100dvw;
+  /* width: 100dvw; */
   height: 750px;
 }
 
@@ -227,7 +226,7 @@ a{
 .news_link{
   position: absolute;
   bottom: 30px;
-  right: 60px;
+  right: 100px;
   display: flex;
   flex-direction: column;
 }
@@ -262,6 +261,7 @@ a{
 .card{
   overflow: hidden;
   border-radius: 5px;
+  box-shadow: 0px 7px 20px rgb(238, 237, 237) ;
 }
 .caption{
   width: 320px;
@@ -274,13 +274,17 @@ a{
     margin: 40px 0;
   }
 }
+.img_con{
+  overflow: hidden;
+  height: 228px;
+}
 .news .card{
   width: 380px;
 }
 .news a:hover{
   & img{
-    scale: 1.06;
-    transition: ease-in 0.35s;
+    scale: 1.05;
+    transition: linear 0.35s;
   }
   & > .card{
     background-color: var(--card_hover);
@@ -292,7 +296,7 @@ a{
 }
 .news img{
   width: 380px;
-  transition: ease-in 0.35s;
+  transition: linear 0.35s;
 }
 .lm{
   color: var(--violet_acc);
@@ -334,7 +338,7 @@ a{
 
 #newsroom{
   
-  width: 100px;
+  width: 92px;
   & a{
     /* display: block; */
     color: var(--generic_d_grey);
@@ -347,7 +351,7 @@ a{
 
   & .decor_line{
     transition: ease-out 0.2s;
-    width: 100px;
+    width: 92px;
     height: 1px;
     background-color: var(--generic_d_grey);
   }
@@ -380,8 +384,8 @@ a{
 }
 .trends a:hover{
   & img{
-    scale: 1.06;
-    transition: ease-in 0.35s;
+    scale: 1.05;
+    transition: linear 0.35s;
   }
   & > .card{
     background-color: var(--card_hover);
@@ -409,7 +413,7 @@ a{
 
 .trends img{
   width: 380px;
-  transition: ease-in 0.35s;
+  transition: linear 0.35s;
 }
 
 .live{
@@ -483,7 +487,205 @@ a{
     background-color: var(--violet_acc);
     animation: moveRight 1s ease-out 0.1s; 
   }
+  &:hover .decor_line{
+    background-color: var(--violet_acc);
+    animation: moveRight 1s ease-out 0.1s; 
+  }
 }
+
+#eve{
+  width: 115px;
+  & a{
+    /* display: block; */
+    color: var(--generic_d_grey);
+  }
+
+  & .decor_line{
+    transition: ease-out 0.2s;
+    width: 115px;
+    height: 1px;
+    background-color: var(--generic_d_grey);
+  }
+
+  &:hover a{
+    color: var(--violet_acc);
+    
+  }
+
+  &:hover .decor_line{
+    background-color: var(--violet_acc);
+    animation: moveRight 1s ease-out 0.1s; 
+  }
+  &:hover .decor_line{
+    background-color: var(--violet_acc);
+    animation: moveRight 1s ease-out 0.1s; 
+  }
+}
+.Foot{
+  display: flex;
+  justify-content: flex-end;
+  padding: 61px 0;
+}
+
+.purpose_bg{
+  background: linear-gradient(140deg, whitesmoke 20%, rgb(107, 176, 255) 90%);
+  padding-bottom: 50px;
+}
+.header3{
+  font-size: 40px;
+  flex-direction: column;
+  & p{
+    padding-top: 50px;
+    color: var(--generic_d_grey);
+    font-weight: 100;
+    font-family: sans-serif;
+    display: block;
+  }
+
+  & span{
+    font-weight: 900;
+    padding: 30px 60px;
+    text-align: center;
+    display: block;
+  }
+}
+.pur{
+  
+  display: flex;
+  background-color: whitesmoke;
+  & img{
+    height: 100%;
+  }
+}
+
+.quote{
+  padding: 20px 50px;
+  flex-direction: column;
+  align-items: flex-start;
+  & p{
+    color: var(--generic_d_grey);
+    padding-top: 20px;
+    font-size: 30px;
+  }
+  & p:last-child{
+    padding: 10px 0;
+    font-size: 20px;
+  }
+  & span:first-child{
+    font-size: 150px;
+    height: 80px;
+  }
+  & span{
+    font-size: 40px;
+    font-weight: 900;
+  }
+  & a{
+    font-weight: 700;
+    color: var(--violet_acc);
+    padding: 20px 0;
+    font-size: 20px;
+  }
+}
+
+#expertise{
+  font-size: 30px;
+  font-weight: 100;
+  color: var(--generic_d_grey);
+}
+
+.ex_sub{
+  width: 296px;
+  height: 400px;
+  background-color: #14142b;
+  color: white;
+  & p{
+    padding-top: 20px;
+    font-size: 1.05rem;
+  }
+}
+.expertise_con a{
+  height: 400px;
+  margin-bottom: 50px;
+  transition: linear 0.3s;
+}
+.expertise_con a:hover .ex_sub{
+  background: linear-gradient(120deg,#5f16b8 10%,#3e92fa 90%);
+}
+.expertise_con a:hover{
+  & .ex1 div{
+    width: 200px;
+  }
+  & .ex2 div{
+    width: 230px;
+  }
+  & .ex3 div{
+    width: 200px;
+  }
+  & .ex4 div{
+    width: 170px;
+  }
+  & .wrapper2{
+    transition: linear 0.3s;
+    padding: 30px 30px 0 30px;
+  }
+  & img{
+    opacity: 0;
+  }
+  & .animated{
+    opacity: 1;
+  }
+}
+.ex1,.ex2,.ex3,.ex4{
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  & div{
+    padding: 0;
+    height: 20px;
+    width: 0px;
+  }
+  & p{
+    height: 20px;
+    font-size: 1.05rem;
+    color: white;
+    padding: 0
+  }
+  & i{
+    padding: 0;
+  }
+}
+.wrapper2{
+  position: relative;
+  height: 100%;
+  padding: 60px 30px 0 30px;
+  transition: linear 0.3s;
+}
+.a_icon{
+  position: relative;
+  height: 120px;
+  & img{
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+}
+.animated{
+  opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes sc_wheel{
   25%{
