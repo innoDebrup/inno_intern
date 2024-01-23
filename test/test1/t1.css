@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  scroll-behavior: smooth;
 }
 a{
   color: #000;
@@ -54,13 +55,14 @@ fieldset{
 .nav_links u{
   width: 100%;
 }
-.nav_links a{
+.nav_links li{
   display: inline-flex;
   align-items: center;
   height: 80px;
   padding: 0 20px;
+  cursor: pointer;
 }
-.nav_links a:hover{
+.nav_links li:hover{
   background-color: rgba(128, 128, 128, 0.186);
 }
 .wrapper{
@@ -108,6 +110,12 @@ fieldset{
   /* font-size: large; */
   border-radius: 0 10px 10px 0;
   background-color: var(--yellow_acc);
+  cursor: pointer;
+
+  &:hover{
+    background-color: var(--orange_acc);
+    color: white;
+  }
 }
 
 .head{
@@ -145,6 +153,7 @@ fieldset{
 
 .video{
   flex-direction: column;
+  padding: 100px 0;
 }
 .video span{
   font-size: 40px;
@@ -163,6 +172,7 @@ fieldset{
   box-shadow: 0px 5px 20px gray;
   border-radius: 2px;
   overflow: hidden;
+  position: relative;
 }
 .item2 ul{
   width: 100%;
@@ -217,7 +227,7 @@ fieldset{
   align-items: flex-end;
   justify-content: flex-end;
   padding: 20px;
-  background-color: var(--yellow_acc);
+  background-color: whitesmoke;
 
 }
 
@@ -227,5 +237,33 @@ fieldset{
 }
 
 .pricing{
-  padding-bottom: 60px;
+  padding-bottom: 200px;
+}
+
+#cross1, #cross2, #cross3{
+  position: absolute;
+  top: -5px;
+  right: 0;
+  color: whitesmoke;
+  font-size: 1.5rem;
+  padding: 5px;
+  cursor: pointer;
+  transition: linear 0.2s;
+  
+  &:hover{
+    font-size: 2rem;
+    transition: linear 0.2s;
+  }
+}
+
+.sub_class{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+  transition: linear 0.2s;
+}
+
+#learn_sec{
+  padding: 80px 0;
 }

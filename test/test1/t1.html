@@ -8,6 +8,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="t1.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -20,9 +22,9 @@
           </div>
           <div class="nav_links">
             <ul class="flex_spabet">
-              <li class="inline"><a href="">Learn</a></li>
-              <li class="inline"><a href="">Embed a Video</a></li>
-              <li class="inline"><a href="">Pricing</a></li>
+              <li class="inline" id="learn_link">Learn</li>
+              <li class="inline" id="embed_link">Embed a Video</li>
+              <li class="inline" id="price_link">Pricing</li>
             </ul>
           </div>
         </div>
@@ -44,7 +46,7 @@
       </div>
     </div>
 
-    <div class="parent">
+    <div class="parent" id="learn_sec">
       <div class="container2">
         <div>
           <span class="head">Learning Section</span>
@@ -80,7 +82,7 @@
         </div>
       </div>
     </div>
-    <div class="parent">
+    <div class="parent" id="embed_sec">
       <div class="container2">
         <div class="flex_center video">
           <span>Embed a Video</span>
@@ -88,11 +90,14 @@
         </div>
       </div>
     </div>
-    <div class="parent">
+    <div class="parent" id="price_sec">
       <div class="container2">
         <div class="head flex_center head2"><span>Pricing boxes</span></div>
         <div class="flex_spabet pricing" id="price">
-          <div class="item2 flex_spabet">
+          <div class="item2 flex_spabet" id="i1">
+            <div id="cross1">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
             <ul>
               <li>HTML</li>
               <li>$30</li>
@@ -102,7 +107,10 @@
             </ul>
             <a href="">SELECT</a>
           </div>
-          <div class="item2 flex_spabet">
+          <div class="item2 flex_spabet" id="i2">
+            <div id="cross2">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
             <ul>
               <li>CSS</li>
               <li>$30</li>
@@ -113,7 +121,10 @@
             </ul>
             <a href="">SELECT</a>
           </div>
-          <div class="item2 flex_spabet">
+          <div class="item2 flex_spabet" id="i3">
+            <div id="cross3">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
             <ul>
               <li>JAVASCRIPT</li>
               <li>$30</li>
