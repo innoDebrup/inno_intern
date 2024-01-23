@@ -11,6 +11,7 @@
   --unselect_grey: rgb(188, 188, 188);
   --generic_d_grey: rgb(38, 38, 38);
   --card_hover: rgba(119, 148, 221, 0.173);
+  --pink_acc: rgba(220, 22, 220, 0.137);
 
 }
 
@@ -255,8 +256,10 @@ a{
 }
 
 .header1{
-  font-size: 20px;
+  font-size: 40px;
   padding: 40px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
 }
 .card{
   overflow: hidden;
@@ -537,16 +540,15 @@ a{
   & p{
     padding-top: 50px;
     color: var(--generic_d_grey);
-    font-weight: 100;
-    font-family: sans-serif;
-    display: block;
+    font-weight: 300;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* display: block; */
   }
 
   & span{
-    font-weight: 900;
     padding: 30px 60px;
     text-align: center;
-    display: block;
+    /* display: block; */
   }
 }
 .pur{
@@ -677,11 +679,56 @@ a{
 }
 
 
+.header4{
+  & p{
+    padding-top: 20px;
+    font-size: 25px;
+    width: 700px;
+  }
+}
 
 
+.client_card{
+  width: 580px;
+  background-color: var(--hover_select);
+}
 
+.c_name{
+  display: inline-block;
+  padding: 30px;
+  & span{
+    font-size: 1.5rem;
+    display: block;
+  }
+  & span:nth-child(2){
+    margin-top: 60px;
+  }
+  & span:first-child::after{
+    display: block;
+    content: "";
+    margin-top: 10px;
+    width: 50px;
+    height: 3px;
+    background-color: var(--generic_d_grey);
+  }
+  & p{
+    padding-top: 5px;
+  }
 
+  & a{
+    background-color: var(--pink_acc);
+    padding: 20px;
+  }
+}
 
+.c_img{
+  width: 240px;
+  overflow: hidden;
+  display: inline-block;
+  & img{
+    width: 100%;
+  }
+}
 
 
 
