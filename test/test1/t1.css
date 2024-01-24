@@ -37,6 +37,7 @@ fieldset{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* transition: linear 0.3s; */
 }
 .flex_center{
   display: flex;
@@ -71,7 +72,7 @@ fieldset{
   position: relative;
 }
 .b1_bg{
-  background: linear-gradient(var(--cover),var(--cover)), url(img/banner.jpg) center/cover;
+  background: linear-gradient(var(--cover),var(--cover)), url(img/banner.jpg) no-repeat center/cover;
   height: calc(100dvh - 80px);
   /* position: relative; */
 }
@@ -220,6 +221,7 @@ fieldset{
   background-color: var(--orange_acc);
   color: white;
 }
+
 .head2{
   margin-top: 60px;
 }
@@ -241,6 +243,7 @@ fieldset{
 
 .pricing{
   padding-bottom: 200px;
+  transition: linear 1s;
 }
 
 #cross1, #cross2, #cross3{
@@ -269,4 +272,25 @@ fieldset{
 
 #learn_sec{
   padding: 80px 0;
+}
+
+#more_c, #less_c, #more_j, #less_j{
+  text-decoration: underline;
+  color: blueviolet;
+  cursor: pointer;
+}
+
+#reset{
+  background-color: var(--yellow_acc);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+#reset:hover{
+  background-color: var(--orange_acc);
+  color: white;
 }
