@@ -92,6 +92,7 @@ a {
 
 .nav_bar {
   background-color: whitesmoke;
+  /* position: relative; */
   height: 72px;
   & nav {
     display: inline-block;
@@ -132,6 +133,10 @@ a {
   }
 }
 
+.relative{
+  position: relative;
+}
+
 .logo {
   display: inline-block;
   padding: 21px 0 21px;
@@ -143,10 +148,6 @@ a {
 
 #mid_item {
   padding-left: 160px;
-}
-
-.expand {
-  position: relative;
 }
 
 .arrow {
@@ -905,24 +906,30 @@ a {
 }
 
 .dropdown{
-  display: none;
+  display:flex;
+  max-height: 0px;
   position: absolute;
-  bottom:0%;
-  transform: translate(-50%,100%);
+  /* right:50%; */
+  right: 0;
+  bottom: 0;
+  transform: translate(0,100%);
   z-index: 1000;
   background-color: white;
-  width: 1200px;
+  max-width:1200px;
+  transition: linear 0.7s;
+  overflow: hidden;
   /* padding: 50px; */
 }
 
 .dropdown ul{
-  width: 100%;
+  /* width: 100%; */
   padding: 30px;
   display: flex;
   align-items: flex-start;
   & li{
-    width: 25%;
     & a{
+      width: 275px;
+      margin: 0 5px;
       border: none;
       height: 40px;
     }
@@ -931,6 +938,17 @@ a {
       border: none;
     }
   }
+}
+
+.dropLink:hover{
+  & + .dropdown{
+    transition: linear 0.7s;
+    max-height: 900px;
+  }
+}
+
+.dropdown:hover, .dropdown ul:hover, .dropdown a:hover .dropdown{
+  max-height: 900px;
 }
 
 @keyframes sc_wheel {
